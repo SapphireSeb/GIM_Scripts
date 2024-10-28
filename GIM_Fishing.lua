@@ -3,6 +3,8 @@ local API = require("api")
 local UTILS = require("utils")
 local player = API.GetLocalPlayerName()
 
+afk = os.time()
+
 local function idleCheck()
     local timeDiff = os.difftime(os.time(), afk)
     local randomTime = math.random(180, 280)
